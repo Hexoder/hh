@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'irs';
+    src: url('fonts/IRS/IRANSansFaNum.eot');
+    src: url('fonts/IRS/IRANSansFaNum.eot?#iefix') format('embedded-opentype'),
+         url('fonts/IRS/IRANSansFaNum.woff2') format('woff2'),
+         url('fonts/IRS/IRANSansFaNum.woff') format('woff'),
+         url('fonts/IRS/IRANSansFaNum.ttf')  format('truetype'),
+         url('fonts/IRS/IRANSansFaNum.svg#IRANSansFaNum') format('svg');
+}
+@font-face {
+    font-family: 'irs-bold';
+    src: url('fonts/IRS/IRANSansFaNumBold.eot');
+    src: url('fonts/IRS/IRANSansFaNumBold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/IRS/IRANSansFaNumBold.woff2') format('woff2'),
+         url('fonts/IRS/IRANSansFaNumBold.woff') format('woff'),
+         url('fonts/IRS/IRANSansFaNumBold.ttf')  format('truetype'),
+         url('fonts/IRS/IRANSansFaNumBold.svg#IRANSansFaNum') format('svg');
+}
+@font-face {
+    font-family: 'irs-ultra-light';
+    src: url('fonts/IRS/IRANSansFaNumUltraLight.eot');
+    src: url('fonts/IRS/IRANSansFaNumUltraLight.eot?#iefix') format('embedded-opentype'),
+         url('fonts/IRS/IRANSansFaNumUltraLight.woff2') format('woff2'),
+         url('fonts/IRS/IRANSansFaNumUltraLight.woff') format('woff'),
+         url('fonts/IRS/IRANSansFaNumUltraLight.ttf')  format('truetype'),
+         url('fonts/IRS/IRANSansFaNumUltraLight.svg#IRANSansFaNum UltraLight') format('svg');
+}
+@font-face {
+    font-family: 'irs-medium';
+    src: url('fonts/IRS/IRANSansFaNumMedium.eot');
+    src: url('fonts/IRS/IRANSansFaNumMedium.eot?#iefix') format('embedded-opentype'),
+         url('fonts/IRS/IRANSansFaNumMedium.woff2') format('woff2'),
+         url('fonts/IRS/IRANSansFaNumMedium.woff') format('woff'),
+         url('fonts/IRS/IRANSansFaNumMedium.ttf')  format('truetype'),
+         url('fonts/IRS/IRANSansFaNumMedium.svg#IRANSansFaNum Medium') format('svg');
+}
+@font-face {
+    font-family: 'irs-light';
+    src: url('fonts/IRS/IRANSansFaNumLight.eot');
+    src: url('fonts/IRS/IRANSansFaNumLight.eot?#iefix') format('embedded-opentype'),
+         url('fonts/IRS/IRANSansFaNumLight.woff2') format('woff2'),
+         url('fonts/IRS/IRANSansFaNumLight.woff') format('woff'),
+         url('fonts/IRS/IRANSansFaNumLight.ttf')  format('truetype'),
+         url('fonts/IRS/IRANSansFaNumLight.svg#IRANSansFaNum Light') format('svg');
+}
+@font-face {
+    font-family: 'irs-black';
+    src: url('fonts/IRS/IRANSansFaNumBlack.eot');
+    src: url('fonts/IRS/IRANSansFaNumBlack.eot?#iefix') format('embedded-opentype'),
+         url('fonts/IRS/IRANSansFaNumBlack.woff2') format('woff2'),
+         url('fonts/IRS/IRANSansFaNumBlack.woff') format('woff'),
+         url('fonts/IRS/IRANSansFaNumBlack.ttf')  format('truetype'),
+         url('fonts/IRS/IRANSansFaNumBlack.svg#IRANSansFaNum Black') format('svg');
+}
+@font-face {
+    font-family: 'CaliBrush';
+    src:url('fonts/CaliBrush/CaliBrush.ttf.woff') format('woff'),
+        url('fonts/CaliBrush/CaliBrush.ttf.svg#CaliBrush') format('svg'),
+        url('fonts/CaliBrush/CaliBrush.ttf.eot') format('embedded-opentype'),
+        url('fonts/CaliBrush/CaliBrush.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+.cali-title-font{
+    font-family: "CaliBrush";
+}
+
+.irs-nav-font li{
+    font-family: "irs-medium";
+}
+
+.irs-title-font{
+    font-family: "irs-bold";
+}
+
+.irs-p-font{
+    font-family: "irs";
+    text-align: justify;
+    direction: rtl;
+}
+.irs-p-font-noj{
+    font-family: "irs";
+
+}
+.irs-p-font-footer{
+    font-family: "irs";
+}
+.custom-icon{
+    width: 25px;
+    margin: 0 0 0 20px;
+    direction: rtl;
+}
+.rtl{
+    direction: rtl;
+}
+.u-footer .u-container-layout-1 ul{
+    list-style: none;
+}
+
+.u-footer .u-container-layout-1 ul li{
+    margin-bottom: 30px;
+}
+.u-footer .u-container-layout-2 ul{
+    list-style: none;
+}
+
+.u-footer .u-container-layout-2 ul li{
+    margin-bottom: 20px;
+}
+.u-footer .u-container-layout-3 ul{
+    list-style: none;
+}
+
+.u-footer .u-container-layout-3 ul li{
+    margin-bottom: 20px;
+}
