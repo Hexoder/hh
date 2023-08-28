@@ -20,3 +20,10 @@ class TagLine(models.Model):
 class Image(models.Model):
     img1=models.ImageField(upload_to='images/')
     img2=models.ImageField(upload_to='images/')
+
+class ContactForm(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.CharField(max_length=100)
+    phone = models.CharField(max_length=100)
+    text = models.CharField(max_length=1000)
+    date = models.DateTimeField(auto_now_add=True)

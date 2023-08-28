@@ -47,7 +47,7 @@
   <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
     <div class="u-layout">
       <div class="u-layout-row">
-        <div class="u-container-style u-image u-layout-cell u-left-cell u-size-28 u-image-1" style="background-image: url('{% static 'hh/images/bg-3.jpg' %)">
+        <div class="u-container-style u-image u-layout-cell u-left-cell u-size-28 u-image-1" style="background-image: url('{% static 'hh/images/bg-3.jpg' %}')">
           <div class="u-container-layout">
             <div class="u-palette-1-base u-shape u-shape-rectangle u-shape-1"></div>
           </div>
@@ -55,7 +55,7 @@
         <div class="u-container-style u-gradient u-layout-cell u-right-cell u-size-32 u-layout-cell-2">
           <div class="u-container-layout">
             <img src="{% static 'hh/images/spl-4.png' %}" alt="" class="u-expanded-width-xs u-image u-image-contain u-image-default u-image-2" data-image-width="900" data-image-height="713">
-            <div class="u-container-style u-group u-image u-image-3" style="background-image: url('{{ MEDIA_URL }}{{ images.img2 }}')">
+            <div class="u-container-style u-group u-image u-image-3" style="background-image: url('{{ images.img1.url }}')">
               <div class="u-container-layout u-container-layout-3"></div>
             </div>
             <div class="u-container-style u-group u-group-2">
@@ -82,7 +82,13 @@
               <div class="u-container-layout u-valign-top-md u-valign-top-sm u-container-layout-2">
                 <p class="u-text u-text-1 irs-title-font">{{ product1.title }}</p>
                 <p class="per u-text u-text-2 irs-p-font">{{ product1.content }}</p>
-                <p class="per u-text u-text-3 irs-p-font">{{ product1.note1 }}<br>{{ product1.note2 }}<br>{{ product1.note3 }}</p>
+                <div class="notediv">
+                  <ul>
+                      <li class="rtl"><p class="per u-text irs-p-font">{{ product1.note1 }}</p></li>
+                      <li class="rtl"><p class="per u-text irs-p-font">{{ product1.note2 }}</p></li>
+                      <li class="rtl"><p class="per u-text irs-p-font">{{ product1.note3 }}</p></li>
+                  </ul>
+                </div>
                 <p class="u-text u-text-4 irs-p-font">{{ product1.smell }}</p>
               </div>
             </div>
@@ -92,7 +98,7 @@
           <div class="u-container-layout u-container-layout-3">
             <div class="u-palette-2-base u-shape u-shape-rectangle u-shape-1"></div>
             <img src="{% static 'hh/images/spl-1.png' %}" alt="" class="u-expanded-width-md u-image u-image-contain u-image-default u-image-1" data-image-width="633" data-image-height="648">
-            <img class="u-image u-image-2" src='{{ MEDIA_URL }}{{ product1.img }}'>
+            <img class="u-image u-image-2" src='{{ product1.img.url }}'>
             <div class="u-align-left u-container-style u-group u-palette-1-base u-group-2">
               <div class="u-container-layout u-container-layout-4">
                 <p class="u-text u-text-5 cali-title-font">{{product1.name}}</p>
@@ -114,14 +120,20 @@
           <div class="u-container-layout u-container-layout-2">
             <p class="u-align-right u-text u-text-1 irs-title-font">{{ product2.title }}</p>
             <p class="per u-text u-text-2 irs-p-font">{{ product2.content }}</p>
-            <p class="per u-text u-text-3 irs-p-font">{{ product2.note1 }}<br>{{ product2.note2 }}<br>{{ product2.note3 }}</p>
+            <div class="notediv">
+              <ul>
+                  <li class="rtl"><p class="per u-text irs-p-font">{{ product2.note1 }}</p></li>
+                  <li class="rtl"><p class="per u-text irs-p-font">{{ product2.note2 }}</p></li>
+                  <li class="rtl"><p class="per u-text irs-p-font">{{ product2.note3 }}</p></li>
+              </ul>
+            </div>
             <p class="u-text u-text-4 irs-p-font">{{ product2.smell }}</p>
           </div>
         </div>
         <img src="{% static 'hh/images/spl-3.png' %}" alt="" class="u-image u-image-contain u-image-default u-image-2" data-image-width="656" data-image-height="630">
       </div>
     </div>
-    <img src='{{ MEDIA_URL }}{{ product2.img }}' alt="" class="u-image u-image-default u-image-3">
+    <img src='{{ product2.img.url }}' alt="" class="u-image u-image-default u-image-3">
     <div class="u-align-left u-container-style u-group u-palette-1-base u-group-3">
       <div class="u-container-layout u-valign-middle u-container-layout-3">
         <p class="eng u-align-left u-text u-text-5 cali-title-font">{{ product2.name }}</p>
@@ -143,10 +155,10 @@
             <div class="u-container-layout u-container-layout-2">
               <div class="u-palette-2-base u-shape u-shape-rectangle u-shape-1"></div>
               <img src="{% static 'hh/images/spl-2.png' %}" alt="" class="u-image u-image-contain u-image-default u-image-2" data-image-width="592" data-image-height="572">
-              <img class="u-image u-image-3" src='{{ MEDIA_URL }}{{ product3.img }}'>
+              <img class="u-image u-image-3" src='{{ product3.img.url }}'>
               <div class="u-container-style u-group u-palette-1-base u-group-1">
                 <div class="u-container-layout u-container-layout-3">
-                  <p class="eng u-text u-text-1 cali-title-font">{{ product3.name}}<br>
+                  <p class="eng u-text u-text-1 cali-title-font">{{ product3.name }}
                   </p>
                 </div>
               </div>
@@ -159,7 +171,13 @@
       <div class="u-container-layout u-container-layout-4">
         <p class="u-text u-text-2 irs-title-font">{{ product3.title }}</p>
         <p class="per u-text u-text-3 irs-p-font">{{ product3.content }}</p>
-        <p class="per u-text u-text-4 irs-p-font">{{ product3.note1 }}<br>{{ product3.note2 }}<br>{{ product3.note3 }}</p>
+        <div class="notediv">
+          <ul>
+              <li class="rtl"><p class="per u-text irs-p-font">{{ product3.note1 }}</p></li>
+              <li class="rtl"><p class="per u-text irs-p-font">{{ product3.note2 }}</p></li>
+              <li class="rtl"><p class="per u-text irs-p-font">{{ product3.note3 }}</p></li>
+          </ul>
+        </div>
         <p class="u-text u-text-5 irs-p-font">{{ product3.smell }}</p>
       </div>
     </div>
@@ -171,12 +189,18 @@
     <div class="u-palette-2-base u-shape u-shape-rectangle u-shape-1"></div>
     <div class="u-palette-3-base u-shape u-shape-rectangle u-shape-2"></div>
     <img src="{% static 'hh/images/spl-3.png' %}" alt="" class="u-image u-image-contain u-image-default u-image-2" data-image-width="656" data-image-height="630">
-    <img src='{{ MEDIA_URL }}{{ product4.img }}' alt="" class="u-image u-image-default u-image-3">
+    <img src='{{ product4.img.url }}' alt="" class="u-image u-image-default u-image-3">
     <div class="u-align-right u-container-style u-expanded-width-xs u-group u-group-1">
       <div class="u-container-layout u-container-layout-1">
         <p class="u-align-right u-text u-text-1 irs-title-font">{{ product4.title }}</p>
         <p class="per u-text u-text-2 irs-p-font">{{ product4.content }}</p>
-        <p class="per u-text u-text-3 irs-p-font">{{ product4.note1 }}<br>{{ product4.note2 }}<br>{{ product4.note3 }}</p>
+        <div class="notediv">
+          <ul>
+              <li class="rtl"><p class="per u-text irs-p-font">{{ product4.note1 }}</p></li>
+              <li class="rtl"><p class="per u-text irs-p-font">{{ product4.note2 }}</p></li>
+              <li class="rtl"><p class="per u-text irs-p-font">{{ product4.note3 }}</p></li>
+          </ul>
+        </div>
         <p class="u-text u-text-4 irs-p-font">{{ product4.smell }}</p>
       </div>
     </div>
@@ -229,7 +253,7 @@
                 <div class="u-container-layout">
                   <img src="{% static 'hh/images/bg-1.jpg' %}" alt="" class="u-image u-image-default u-image-1">
                   <div class="u-align-left-lg u-align-left-xl u-palette-2-base u-shape u-shape-rectangle u-shape-1"></div>
-                  <img class="u-image u-image-2" src='{{ MEDIA_URL }}{{ product5.img }}'>
+                  <img class="u-image u-image-2" src='{{ product5.img.url }}'>
                   <div class="u-align-left u-container-style u-group u-palette-1-base u-group-1">
                     <div class="u-container-layout u-container-layout-2">
                       <p class="eng u-text u-text-1 cali-title-font">{{ product5.name }}<br>
@@ -252,7 +276,13 @@
                     <div class="u-container-layout u-container-layout-5">
                       <p class="u-align-right u-text u-text-2 irs-title-font">{{ product5.title }}</p>
                       <p class="u-text u-text-3 irs-p-font">{{ product5.content }}</p>
-                      <p class="per u-text u-text-4 irs-p-font">{{ product5.note1 }}<br>{{ product5.note2 }}<br>{{ product5.note3 }}</p>
+                      <div class="notediv">
+                        <ul>
+                            <li class="rtl"><p class="per u-text irs-p-font">{{ product5.note1 }}</p></li>
+                            <li class="rtl"><p class="per u-text irs-p-font">{{ product5.note2 }}</p></li>
+                            <li class="rtl"><p class="per u-text irs-p-font">{{ product5.note3 }}</p></li>
+                        </ul>
+                      </div>
                       <p class="u-text u-text-5 irs-p-font">{{ product5.smell }}</p>
                     </div>
                   </div>
@@ -279,7 +309,7 @@
             <div class="u-container-layout u-container-layout-2">
               <div class="u-palette-2-base u-shape u-shape-rectangle u-shape-1"></div>
               <img src="{% static 'hh/images/spl-2.png' %}" alt="" class="u-image u-image-contain u-image-default u-image-2" data-image-width="592" data-image-height="572">
-              <img class="u-image u-image-3" src='{{ MEDIA_URL }}{{ product6.img }}'>
+              <img class="u-image u-image-3" src='{{ product6.img.url }}'>
               <div class="u-container-style u-group u-palette-1-base u-group-1">
                 <div class="u-container-layout u-container-layout-3">
                   <p class="u-text u-text-1 cali-title-font">{{ product6.name }}<br>
@@ -295,7 +325,13 @@
       <div class="u-container-layout u-container-layout-4">
         <p class="u-text u-text-2 irs-title-font">{{ product6.title }}</p>
         <p class="per u-text u-text-3 irs-p-font">{{ product6.content }}</p>
-        <p class="per u-text u-text-4 irs-p-font">{{ product6.note1 }}<br>{{ product6.note2 }}<br>{{ product6.note3 }}</p>
+        <div class="notediv">
+          <ul>
+              <li class="rtl"><p class="per u-text irs-p-font">{{ product6.note1 }}</p></li>
+              <li class="rtl"><p class="per u-text irs-p-font">{{ product6.note2 }}</p></li>
+              <li class="rtl"><p class="per u-text irs-p-font">{{ product6.note3 }}</p></li>
+          </ul>
+        </div>
         <p class="u-text u-text-5 irs-p-font">{{ product6.smell }}</p>
       </div>
     </div>
@@ -311,14 +347,20 @@
           <div class="u-container-layout u-container-layout-2">
             <p class="u-align-right u-text u-text-1 irs-title-font">{{ product7.title }}</p>
             <p class="per u-text u-text-2 irs-p-font">{{ product7.content}}</p>
-            <p class="per u-text u-text-3 irs-p-font">{{ product7.note1 }}<br>{{ product7.note2 }}<br>{{ product7.note3 }}</p>
+            <div class="notediv">
+              <ul>
+                  <li class="rtl"><p class="per u-text irs-p-font">{{ product7.note1 }}</p></li>
+                  <li class="rtl"><p class="per u-text irs-p-font">{{ product7.note2 }}</p></li>
+                  <li class="rtl"><p class="per u-text irs-p-font">{{ product7.note3 }}</p></li>
+              </ul>
+            </div>
             <p class="u-text u-text-4 irs-p-font">{{product7.smell}}</p>
           </div>
         </div>
       </div>
     </div>
     <img src="{% static 'hh/images/spl-3.png' %}" alt="" class="u-expanded-width-sm u-image u-image-contain u-image-default u-image-2" data-image-width="656" data-image-height="630">
-    <img src='{{ MEDIA_URL }}{{ product7.img }}' alt="" class="u-image u-image-default u-image-3">
+    <img src='{{ product7.img.url }}' alt="" class="u-image u-image-default u-image-3">
     <div class="u-align-left u-container-style u-group u-palette-1-base u-group-3">
       <div class="u-container-layout u-container-layout-3">
         <p class="u-text u-text-5 cali-title-font">{{ product7.name }}</p>
@@ -336,7 +378,13 @@
               <div class="u-container-layout u-container-layout-2">
                 <p class="u-text u-text-1 irs-title-font">{{ product8.title }}</p>
                 <p class="per u-text u-text-2 irs-p-font">{{ product8.content }}</p>
-                <p class="u-text u-text-3 irs-p-font">{{ product8.note1 }}<br>{{ product8.note2 }}<br>{{ product8.note3 }}</p>
+                <div class="notediv">
+                  <ul>
+                      <li class="rtl"><p class="per u-text irs-p-font">{{ product8.note1 }}</p></li>
+                      <li class="rtl"><p class="per u-text irs-p-font">{{ product8.note2 }}</p></li>
+                      <li class="rtl"><p class="per u-text irs-p-font">{{ product8.note3 }}</p></li>
+                  </ul>
+                </div>
                 <p class="u-text u-text-4 irs-p-font">{{ product8.smell }}</p>
               </div>
             </div>
@@ -346,7 +394,7 @@
           <div class="u-container-layout u-container-layout-3">
             <div class="u-hidden-xs u-palette-2-base u-shape u-shape-rectangle u-shape-1"></div>
             <img src="{% static 'hh/images/spl-1.png' %}" alt="" class="u-image u-image-contain u-image-default u-image-1" data-image-width="633" data-image-height="648">
-            <img class="u-image u-image-2" src='{{ MEDIA_URL }}{{ product8.img }}'>
+            <img class="u-image u-image-2" src='{{ product8.img.url }}'>
             <div class="u-align-left u-container-style u-group u-palette-1-base u-group-2">
               <div class="u-container-layout u-valign-middle-xs u-container-layout-4">
                 <p class="u-text u-text-5 cali-title-font">{{ product8.name }}</p>
@@ -358,7 +406,7 @@
     </div>
   </div>
 </section>
-<section class="skrollable u-clearfix u-image u-parallax u-section-11" style="background-image: url('{{ MEDIA_URL }}{{ images.img2 }}')" id="sec-0b55">
+<section class="skrollable u-clearfix u-image u-parallax u-section-11" style="background-image: url('{{ images.img2.url }}')" id="sec-0b55">
   <div class="u-clearfix u-sheet u-valign-middle-sm u-sheet-1">
     <img src="{% static 'hh/images/bg-4.jpg' %}" alt="" class="u-image u-image-default u-image-1">
     <div class="u-palette-1-base u-shape u-shape-rectangle u-shape-1"></div>
@@ -381,11 +429,11 @@
           <br><br>
           نمايندگي انحصاري شركت پارفاروم و سنساروم اسپانيا و صاحب برند و توليد كننده ادكلن H&H 
           <br><br>
-          ٠١١٣٣٣٠٥١٧٨/٠١١٣٣٣٢٣٧٤٩
+          ٠١١٣٣٣٠٥١٧٨ / ٠١١٣٣٣٢٣٧٤٩
           <br>
-          ٠٩١١١٥٨٠٩٥٩/٠٩١٢٥٣٠٤٦٦٧
+          ٠٩١١١٥٨٠٩٥٩ / ٠٩١٢٥٣٠٤٦٦٧
           <br><br>
-          ساري خيابان قارن قارن ١٤ مجتمع نور طبقه اول واحد 5
+          ساري، خيابان قارن، قارن ،١٤ مجتمع نور، طبقه اول، واحد 5
           <br><br>
           abbassortiji@gmail.com
           </p>
@@ -406,7 +454,7 @@
         <div class="u-clearfix u-custom-html u-expanded-width u-custom-html-1"></div>
         <h1 class="u-align-justify u-text u-text-default u-text-1 irs-title-font">تماس با ما</h1>
         <div class="u-align-center u-form u-form-1">
-          <form action='/' method="POST" class="u-clearfix u-form-spacing-20 u-form-vertical u-inner-form" style="padding: 10px" source="email" name="form">
+          <form action='/message-sent' method="POST" class="u-clearfix u-form-spacing-20 u-form-vertical u-inner-form" style="padding: 10px" source="email" name="form" onsubmit="this.submit();this.reset()">
             {% csrf_token %}
             <div class="u-form-group u-form-name u-label-none irs-form-font">
               <label for="name-3b9a" class="u-label">Name</label>
@@ -426,21 +474,21 @@
             </div>
             <div class="u-align-center u-form-group u-form-submit u-label-none">
             <button class="u-border-2 u-border-white u-btn u-btn-rectangle u-btn-submit u-button-style u-none u-btn-1 irs-p-font-noj" type='submit'>ارسال</button>
-            {% if formstatus %}
-                <p>Message Sent!</p>
-            {% endif %}
-              <!--<a href="" class="u-border-2 u-border-white u-btn u-btn-rectangle u-btn-submit u-button-style u-none u-btn-1 irs-p-font-noj u-form-control-hidden">ارسال</a>
-              <input type="submit" value="submit" class="u-form-control-hidden">
-              
-              -->
+            <div class="notification-container" id="notification-container"></div>
+
+            <!--
+            <a href="" class="u-border-2 u-border-white u-btn u-btn-rectangle u-btn-submit u-button-style u-none u-btn-1 irs-p-font-noj u-form-control-hidden">ارسال</a>
+            <input type="submit" value="submit" class="u-form-control-hidden">
+            -->
+            
             </div>
           </form>
         </div>
         <div class="u-clearfix u-group-elements u-group-elements-1">
           <p class="u-align-right irs-p-font u-text u-text-2"><img class="custom-icon" src="{% static 'hh/images/phonewhite.png' %}" alt="">01133323749 . 01133305178</p>
           <p class="u-align-right irs-p-font u-text u-text-3"><img class="custom-icon" src="{% static 'hh/images/phonewhite.png' %}" alt="">09111580959 . 09125304667</p>
-          <p class="u-align-right irs-p-font u-text u-text-4"><img class="custom-icon" src="{% static 'hh/images/attsign.png' %}" alt=""><a href="mailto:aabbassortiji@gmail.com">aabbassortiji@gmail.com</a></p>
-          <p class="u-align-right irs-p-font u-text u-text-5"><span class="u-icon u-icon-4"></span><img class="custom-icon" src="{% static 'hh/images/locwhite.png' %}" alt="">ساري خيابان قارن قارن ١٤ مجتمع نور طبقه اول واحد 5</p>
+          <p class="u-align-right irs-p-font u-text u-text-4"><img class="custom-icon" src="{% static 'hh/images/attsign.png' %}" alt="">aabbassortiji@gmail.com</p>
+          <p class="u-align-right irs-p-font u-text u-text-5"><img class="custom-icon" src="{% static 'hh/images/locwhite.png' %}" alt="">ساري، خيابان قارن، قارن ١٤، مجتمع نور، طبقه اول، واحد 5</p>
         </div>
         <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1" data-animation-name="flipIn" data-animation-duration="1000" data-animation-direction="X">
           <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/name"><span class="u-icon u-social-facebook u-social-icon u-text-white u-icon-6"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-22d8"></use></svg><svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-22d8"><path fill="currentColor" d="M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2
@@ -471,53 +519,44 @@ c0-7.1,5.8-12.8,12.8-12.8h44.7c7.1,0,12.8,5.8,12.8,12.8V78.4z"></path></svg></sp
           <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-20 u-size-20-md u-layout-cell-1">
             <div class="u-container-layout u-container-layout-1">
                 <ul>
-                    <li><a href="#sec-0431" class="u-text u-text-1 irs-p-font-footer">صفحه اصلی</a></li>
-                    <li><a href='#carousel_d465' class="u-text u-text-2 irs-p-font-footer">عطر مردانه</a></li>
-                    <li><a href='#sec-8e24' class="u-text u-text-3 irs-p-font-footer">عطر زنانه</a></li>
-                    <li><a href='#sec-44d5' class="u-text u-text-4 irs-p-font-footer">درباره ما</a></li>
+                    <li><a href="#sec-0431" class="u-text u-text-1 irs-p-font-noj">صفحه اصلی</a></li>
+                    <li><a href='#carousel_d465' class="u-text u-text-2 irs-p-font-noj">عطر مردانه</a></li>
+                    <li><a href='#sec-8e24' class="u-text u-text-3 irs-p-font-noj">عطر زنانه</a></li>
+                    <li><a href='#sec-44d5' class="u-text u-text-4 irs-p-font-noj">درباره ما</a></li>
                 </ul>
             </div>
           </div>
           <div class="u-align-center u-container-style u-layout-cell u-size-20 u-size-20-md u-layout-cell-2">
             <div class="u-container-layout u-container-layout-2">
                 <ul>
-                    <li><p class="u-text u-text-5 irs-p-font-footer">instagram.com/</p></li>
-                    <li><p class="u-text u-text-6 irs-p-font-footer">facebook.com/</p></li>
-                    <li><p class="u-text u-text-7 irs-p-font-footer">twitter.com/</p></li>                   
-                    <li><p class="u-text u-text-8 irs-p-font-footer">linkedin.com/</p></li>                
+                    <li><a href = "#sec-b2dc" class="u-text u-text-5 irs-p-font-noj">instagram</a></li>
+                    <li><a href = "#sec-b2dc" class="u-text u-text-6 irs-p-font-noj">facebook</a></li>
+                    <li><a href = "#sec-b2dc" class="u-text u-text-7 irs-p-font-noj">twitter</a></li>                   
+                    <li><a href = "#sec-b2dc" class="u-text u-text-8 irs-p-font-noj">linkedin</a></li>                
                 </ul>
             </div>
           </div>
           <div class="u-align-center u-container-style u-layout-cell u-right-cell u-size-20 u-size-20-md u-layout-cell-3">
             <div class="u-container-layout u-container-layout-3">
                 <ul>
-                    <li><p class="u-text u-text-9 irs-p-font-footer">09111580959</p></li>
-                    <li><p class="u-text u-text-10 irs-p-font-footer">09111580959</p></li>
-                    <li><p class="u-text u-text-11 irs-p-font-footer">01133323749</p></li>
-                    <li><p class="u-text u-text-12 irs-p-font-footer">01133323749</p></li>
+                    <li><a href = "#sec-b2dc" class="u-text u-text-9 irs-p-font-noj">09111580959</a></li>
+                    <li><a href = "#sec-b2dc" class="u-text u-text-10 irs-p-font-noj">09111580959</a></li>
+                    <li><a href = "#sec-b2dc" class="u-text u-text-11 irs-p-font-noj">01133323749</a></li>
+                    <li><a href = "#sec-b2dc" class="u-text u-text-12 irs-p-font-noj">01133323749</a></li>
                 </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="u-align-left u-border-1 u-border-white u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-line u-line-horizontal u-opacity u-opacity-25 u-line-1"></div>
-    <p class="u-align-center u-small-text u-text u-text-variant u-text-13"> .تمام حقوق مادی و معنوی تصاویر، طراحی، محصولات و محتوا نزد&nbsp;اچ ان اچ&nbsp;محفوظ می باشد</p>
-  </div></footer>
-<!--
+    </footer>
+
 <section class="u-backlink u-clearfix u-grey-80">
-  <a class="u-link" href="https://nicepage.com/css-templates" target="_blank">
-    <span>CSS Templates</span>
-  </a>
-  <p class="u-text">
-    <span>created with</span>
-  </p>
-  <a class="u-link" href="" target="_blank">
-    <span>Website Design Software</span>
-  </a>. 
+    <p class="u-align-center u-text u-text-variant u-text-13 u-small-text-foot"> .تمام حقوق مادی و معنوی تصاویر، طراحی، محصولات و محتوا نزد&nbsp;اچ ان اچ&nbsp;محفوظ می باشد</p>
 </section>
--->
-</body>
 
 
 {% endblock %}
+
+
+
