@@ -35,6 +35,7 @@ def index(request):
         'images'   :images,
         })
 
+
 def messagesent(request):
     entered_name = request.POST['name']
     entered_email = request.POST['email']
